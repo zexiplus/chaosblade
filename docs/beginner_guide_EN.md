@@ -2,7 +2,7 @@ Welcome to the chaosblade project! this article will take you through the chaosb
 
 # Download chaosblade
 
-Get the latest [release](https://github.com/chaosblade-io/chaosblade/releases) package of chaosblade, currently supported by linux/amd64 and darwin/64, and download the package for the corresponding platform.
+Get the latest [release](https://github.com/lomoonmoonbird/chaosblade/releases) package of chaosblade, currently supported by linux/amd64 and darwin/64, and download the package for the corresponding platform.
 
 Just download and unzip it, no need to compile.
 
@@ -212,11 +212,11 @@ If you can't find the UID returned by the previous prepare, execute `. /blade st
 
 # FAQ
 ### How to get the latest version
-Every time chaosblade is released, the related changelog and the new version of the package will be synchronized to RELEASE, which can be downloaded at [this address](https://github.com/chaosblade-io/chaosblade/releases).
+Every time chaosblade is released, the related changelog and the new version of the package will be synchronized to RELEASE, which can be downloaded at [this address](https://github.com/lomoonmoonbird/chaosblade/releases).
 
 ### Is there a support plan for the Windows platform
 There is no support plan, but you are welcome to raise relevant support issues, the community will decide whether to support according to your needs.
 
 ### Executing the blade command reports an error: exec format error or cannot execute binary file 
 
-This problem is caused by an incompatibility between the chaosblade package and the running platform. Please inform us about the problem by mentioning [ISSUE](https://github.com/chaosblade-io/chaosblade/issues), and mark the issue with the downloaded chaosblade package version and The operating system version information is indicated in the issue.
+This problem is caused by an incompatibility between the chaosblade package and the running platform. Please inform us about the problem by mentioning [ISSUE](https://github.com/lomoonmoonbird/chaosblade/issues), and mark the issue with the downloaded chaosblade package version and The operating system version information is indicated in the issue.

@@ -2,7 +2,7 @@
 
 # 下载 chaosblade
 
-获取 chaosblade 最新的 [release](https://github.com/chaosblade-io/chaosblade/releases) 包，目前支持的平台是 linux/amd64 和 darwin/64，下载对应平台的包。
+获取 chaosblade 最新的 [release](https://github.com/lomoonmoonbird/chaosblade/releases) 包，目前支持的平台是 linux/amd64 和 darwin/64，下载对应平台的包。
 
 下载完成后解压即可，无需编译。
 
@@ -218,4 +218,4 @@ chaosblade 每次发布，相关的 changelog 和新版的包都会同步到 REL
 暂无支持计划，不过欢迎大家提相关支持的 issue，社区会根据大家的需求来决定是否支持。
 
 ### 执行 blade 命令报错： exec format error 或 cannot execute binary file 
-这个问题是由于 chaosblade 包和运行的平台不兼容造成的，请提 [ISSUE](https://github.com/chaosblade-io/chaosblade/issues)来告知我们您遇到的问题，issue 中标注下载的 chaosblade 包版本和操作系统版本信息。
+这个问题是由于 chaosblade 包和运行的平台不兼容造成的，请提 [ISSUE](https://github.com/lomoonmoonbird/chaosblade/issues)来告知我们您遇到的问题，issue 中标注下载的 chaosblade 包版本和操作系统版本信息。

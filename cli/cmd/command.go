@@ -21,11 +21,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 
-	"github.com/chaosblade-io/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/data"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
 )
 

@@ -20,7 +20,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"strings"
 	"time"
 )

@@ -19,7 +19,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/chaosblade-io/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/data"
 )
 
 func TestPrepareJvmCommand_insertPrepareRecord(t *testing.T) {

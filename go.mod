@@ -1,14 +1,14 @@
-module github.com/chaosblade-io/chaosblade
+module github.com/lomoonmoonbird/chaosblade
 
 go 1.20
 
 require (
-	github.com/chaosblade-io/chaosblade-exec-cloud v1.7.3
-	github.com/chaosblade-io/chaosblade-exec-cri v1.7.3
-	github.com/chaosblade-io/chaosblade-exec-middleware v1.7.3
-	github.com/chaosblade-io/chaosblade-exec-os v1.7.3
-	github.com/chaosblade-io/chaosblade-operator v1.7.3
-	github.com/chaosblade-io/chaosblade-spec-go v1.7.3
+	github.com/lomoonmoonbird/chaosblade-exec-cloud v1.7.3
+	github.com/lomoonmoonbird/chaosblade-exec-cri v1.7.3
+	github.com/lomoonmoonbird/chaosblade-exec-middleware v1.7.3
+	github.com/lomoonmoonbird/chaosblade-exec-os v1.7.3
+	github.com/lomoonmoonbird/chaosblade-operator v1.7.3
+	github.com/lomoonmoonbird/chaosblade-spec-go v1.7.3
 	github.com/mattn/go-sqlite3 v1.10.1-0.20190217174029-ad30583d8387
 	github.com/olekukonko/tablewriter v0.0.5-0.20201029120751-42e21c7531a3
 	github.com/shirou/gopsutil v3.21.8-0.20210816101416-f86a04298073+incompatible

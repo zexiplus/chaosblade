@@ -20,14 +20,14 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	neturl "net/url"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/channel"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 
-	"github.com/chaosblade-io/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/data"
 )
 
 // Executor for jvm experiment

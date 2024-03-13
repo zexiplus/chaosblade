@@ -22,11 +22,11 @@ import (
 	"os"
 	"path"
 
-	"github.com/chaosblade-io/chaosblade-exec-cri/exec"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-exec-cri/exec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 
-	"github.com/chaosblade-io/chaosblade/cli/cmd"
+	"github.com/lomoonmoonbird/chaosblade/cli/cmd"
 )
 
 var version = "1.7.1"

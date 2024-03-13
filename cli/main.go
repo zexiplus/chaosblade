@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/chaosblade-io/chaosblade/cli/cmd"
+	"github.com/lomoonmoonbird/chaosblade/cli/cmd"
 )
 
 func main() {

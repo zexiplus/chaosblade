@@ -22,7 +22,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/chaosblade-io/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/data"
 )
 
 func Test_baseCommand_recordExpModel(t *testing.T) {

@@ -19,10 +19,10 @@ import (
 	"fmt"
 	"path"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	specutil "github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	specutil "github.com/lomoonmoonbird/chaosblade-spec-go/util"
 
-	"github.com/chaosblade-io/chaosblade/version"
+	"github.com/lomoonmoonbird/chaosblade/version"
 )
 
 var AllCheckModels *spec.Models

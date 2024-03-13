@@ -18,14 +18,14 @@ package cmd
 
 import (
 	"context"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"time"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 	"github.com/spf13/cobra"
 
-	"github.com/chaosblade-io/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/data"
 )
 
 const (

@@ -19,11 +19,11 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"strings"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/channel"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
 )
 

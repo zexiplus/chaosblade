@@ -1,4 +1,4 @@
-遵循此模型，可以简单明了的执行一次混沌实验，控制实验的最小爆炸半径。并且可以方便快捷的扩展新的实验场景或者增强现有场景。[chaosblade](https://github.com/chaosblade-io/chaosblade) 和 [chaosblade-exec-jvm](https://github.com/chaosblade-io/chaosblade-exec-jvm) 工程都根据此模型实现。
+遵循此模型，可以简单明了的执行一次混沌实验，控制实验的最小爆炸半径。并且可以方便快捷的扩展新的实验场景或者增强现有场景。[chaosblade](https://github.com/lomoonmoonbird/chaosblade) 和 [chaosblade-exec-jvm](https://github.com/lomoonmoonbird/chaosblade-exec-jvm) 工程都根据此模型实现。
 
 # 模型定义
 

@@ -20,7 +20,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"github.com/shirou/gopsutil/process"
 	"os/exec"
 	"path"
@@ -29,11 +29,11 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/chaosblade-io/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/data"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/channel"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 	"github.com/spf13/cobra"
 )
 
@@ -266,7 +266,7 @@ func (cc *CreateCommand) actionPostRunEFunc(actionCommand *actionCommand) func(c
 			}
 
 			if timeout > 0 && actionCommand.uid != "" {
-				// fix https://github.com/chaosblade-io/chaosblade-operator/issues/34
+				// fix https://github.com/lomoonmoonbird/chaosblade-operator/issues/34
 				if actionCommand.expModel.Scope == "container" || actionCommand.expModel.Scope == "pod" {
 					timeout = timeout + 60
 				}

@@ -16,7 +16,7 @@
 
 package cri
 
-import "github.com/chaosblade-io/chaosblade-spec-go/spec"
+import "github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 
 type CommandModelSpec struct {
 	spec.BaseExpModelCommandSpec

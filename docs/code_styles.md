@@ -111,8 +111,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/chaosblade-io/chaosblade/data"
-	"github.com/chaosblade-io/chaosblade/util"
+	"github.com/lomoonmoonbird/chaosblade/data"
+	"github.com/lomoonmoonbird/chaosblade/util"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"

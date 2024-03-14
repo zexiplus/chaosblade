@@ -275,7 +275,7 @@ check_yaml:
 ## Select scenario build linux version by docker image
 build_linux_with_arg:
 	docker run --rm \
-		-v $(shell echo -n ${GOPATH}):/go \
+		-v $(shell go env GOPATH):/go \
 		-w /go/src/github.com/lomoonmoonbird/chaosblade \
 		-v ~/.m2/repository:/root/.m2/repository \
         -v $(shell pwd):/go/src/github.com/lomoonmoonbird/chaosblade \
@@ -285,7 +285,7 @@ build_linux_with_arg:
 build_linux_arm_with_arg:
 	docker run --rm --privileged multiarch/qemu-user-static:register --reset
 	docker run --rm \
-		-v $(shell echo -n ${GOPATH}):/go \
+		-v $(shell go env GOPATH):/go \
 		-w /go/src/github.com/lomoonmoonbird/chaosblade \
 		-v ~/.m2/repository:/root/.m2/repository \
 		-v $(shell pwd):/go/src/github.com/lomoonmoonbird/chaosblade \

@@ -278,6 +278,7 @@ build_linux_with_arg:
 		-v $(shell go env GOPATH):/go \
 		-w /go/src/github.com/lomoonmoonbird/chaosblade \
 		-v ~/.m2/repository:/root/.m2/repository \
+		-v  /home/chaosblade/:/home/chaosblade/ \
         -v $(shell pwd):/go/src/github.com/lomoonmoonbird/chaosblade \
 		ghcr.io/chaosblade-io/chaosblade-build-musl:latest build_with $$ARGS
 

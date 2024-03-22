@@ -3,12 +3,12 @@ module github.com/lomoonmoonbird/chaosblade
 go 1.20
 
 require (
-	github.com/lomoonmoonbird/chaosblade-exec-cloud master
-	github.com/lomoonmoonbird/chaosblade-exec-cri master
-	github.com/lomoonmoonbird/chaosblade-exec-middleware master
-	github.com/lomoonmoonbird/chaosblade-exec-os master
-	github.com/lomoonmoonbird/chaosblade-operator master
-	github.com/lomoonmoonbird/chaosblade-spec-go master
+	github.com/lomoonmoonbird/chaosblade-exec-cloud v1.8.5
+	github.com/lomoonmoonbird/chaosblade-exec-cri v1.8.5
+	github.com/lomoonmoonbird/chaosblade-exec-middleware v1.8.5
+	github.com/lomoonmoonbird/chaosblade-exec-os v1.8.5
+	github.com/lomoonmoonbird/chaosblade-operator v1.8.5
+	github.com/lomoonmoonbird/chaosblade-spec-go v1.8.5
 	github.com/mattn/go-sqlite3 v1.10.1-0.20190217174029-ad30583d8387
 	github.com/olekukonko/tablewriter v0.0.5-0.20201029120751-42e21c7531a3
 	github.com/shirou/gopsutil v3.21.8-0.20210816101416-f86a04298073+incompatible
@@ -114,3 +114,27 @@ require (
 )
 
 replace k8s.io/client-go => k8s.io/client-go v0.20.6
+
+replace (
+	github.com/lomoonmoonbird/chaosblade-spec-go =>  /home/chaosblade/chaosblade-spec-go
+)
+
+replace (
+	github.com/lomoonmoonbird/chaosblade-exec-os =>  /home/chaosblade/chaosblade-exec-os
+)
+
+replace (
+	github.com/lomoonmoonbird/chaosblade-exec-cri =>  /home/chaosblade/chaosblade-exec-cri
+)
+
+replace (
+	github.com/lomoonmoonbird/chaosblade-exec-cloud =>  /home/chaosblade/chaosblade-exec-cloud
+)
+
+replace (
+	github.com/lomoonmoonbird/chaosblade-operator =>  /home/chaosblade/chaosblade-operator
+)
+
+replace (
+	github.com/lomoonmoonbird/chaosblade-exec-middleware =>  /home/chaosblade/chaosblade-exec-middleware
+)

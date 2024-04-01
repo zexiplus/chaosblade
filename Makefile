@@ -253,7 +253,7 @@ upx: ## Upx compression by docker image
 	docker run --rm \
     		-w $(shell pwd)/$(BUILD_TARGET_PKG_DIR) \
     		-v $(shell pwd)/$(BUILD_TARGET_PKG_DIR):$(shell pwd)/$(BUILD_TARGET_PKG_DIR) \
-     		ghcr.io/lomoonmoonbird/chaosblade-upx:3.96 \
+     		ghcr.io/chaosblade-io/chaosblade-upx:3.96 \
     		--best \
     		blade $(shell pwd)/$(BUILD_TARGET_PKG_DIR)/bin/*
 

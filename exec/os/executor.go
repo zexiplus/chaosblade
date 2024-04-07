@@ -19,13 +19,14 @@ package os
 import (
 	"context"
 	"fmt"
+	os_exec "os/exec"
+	"path"
+	"syscall"
+
 	"github.com/lomoonmoonbird/chaosblade-exec-os/exec"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
-	os_exec "os/exec"
-	"path"
-	"syscall"
 )
 
 type Executor struct {
@@ -46,9 +47,9 @@ func (e *Executor) Exec(uid string, ctx context.Context, model *spec.ExpModel) *
 		return sshExecutor.Exec(uid, ctx, model)
 	}
 
-	var mode string 
+	var mode string
 	var argsArray []string
-	
+
 	_, isDestroy := spec.IsDestroy(ctx)
 	if isDestroy {
 		mode = spec.Destroy
@@ -58,10 +59,18 @@ func (e *Executor) Exec(uid string, ctx context.Context, model *spec.ExpModel) *
 
 	argsArray = append(argsArray, mode, model.Target, model.ActionName, fmt.Sprintf("--uid=%s", uid))
 	for k, v := range model.ActionFlags {
-		if v == "" ||  k == "timeout" {
+		if v == "" || k == "timeout" {
 			continue
 		}
 		argsArray = append(argsArray, fmt.Sprintf("--%s=%s", k, v))
+		if mode == spec.Create {
+			if model.Target == "disk" && model.ActionName == "burn" && k == "path" { //证明是 create disk burn --path={} 的故障
+				if !util.IsDir(v) { //如果目录不存在则直接返回
+					log.Errorf(ctx, "`%s`: path is illegal, is not a directory", v)
+					return spec.ResponseFailWithFlags(spec.ParameterIllegal, "path", v, "it must be a directory")
+				}
+			}
+		}
 	}
 
 	chaosOsBin := path.Join(util.GetProgramPath(), "bin", spec.ChaosOsBin)

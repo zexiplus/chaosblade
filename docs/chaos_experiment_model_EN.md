@@ -1,4 +1,4 @@
-Following this model, it is straightforward to perform a chaos experiment and control the minimum explosion radius of the experiment.The [chaosblade](https://github.com/lomoonmoonbird/chaosblade) and [chaosblade-exec-jvm](https://github.com/lomoonmoonbird/chaosblade-exec-jvm) projects are implemented according to this model.
+Following this model, it is straightforward to perform a chaos experiment and control the minimum explosion radius of the experiment.The [chaosblade](https://github.com/zexiplus/chaosblade) and [chaosblade-exec-jvm](https://github.com/zexiplus/chaosblade-exec-jvm) projects are implemented according to this model.
 
 ## Model Definition
 Before giving the model discuss the problem of implementing a chaos experiment explicitly.

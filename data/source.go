@@ -20,12 +20,12 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"path"
 	"sync"
 	"unicode"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 	_ "github.com/mattn/go-sqlite3"
 )
 

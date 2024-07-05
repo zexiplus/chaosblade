@@ -15,12 +15,12 @@ BLADE_SRC_ROOT=$(shell pwd)
 
 GO_ENV=CGO_ENABLED=1
 GO_MODULE=GO111MODULE=on
-VERSION_PKG=github.com/lomoonmoonbird/chaosblade/version
+VERSION_PKG=github.com/zexiplus/chaosblade/version
 # Specify chaosblade version in docker experiments
-CRI_BLADE_VERSION=github.com/lomoonmoonbird/chaosblade-exec-cri/version
-OS_BLADE_VERSION=github.com/lomoonmoonbird/chaosblade-exec-os/version
-JVM_BLADE_VERSION=github.com/lomoonmoonbird/chaosblade-exec-jvm/version
-K8S_BLADE_VERSION=github.com/lomoonmoonbird/chaosblade-operator/version
+CRI_BLADE_VERSION=github.com/zexiplus/chaosblade-exec-cri/version
+OS_BLADE_VERSION=github.com/zexiplus/chaosblade-exec-os/version
+JVM_BLADE_VERSION=github.com/zexiplus/chaosblade-exec-jvm/version
+K8S_BLADE_VERSION=github.com/zexiplus/chaosblade-operator/version
 
 GO_X_FLAGS=-X ${VERSION_PKG}.Ver=$(BLADE_VERSION) -X '${VERSION_PKG}.Env=`uname -mv`' -X '${VERSION_PKG}.BuildTime=`date`' -X ${CRI_BLADE_VERSION}.BladeVersion=$(BLADE_VERSION) -X ${OS_BLADE_VERSION}.BladeVersion=$(BLADE_VERSION) -X ${JVM_BLADE_VERSION}.BladeVersion=$(BLADE_VERSION) -X ${K8S_BLADE_VERSION}.BladeVersion=$(BLADE_VERSION)
 GO_FLAGS=-ldflags="$(GO_X_FLAGS) -s -w"
@@ -45,31 +45,31 @@ BUILD_ARM_IMAGE_PATH=build/image/blade_arm
 BUILD_TARGET_CACHE=$(BUILD_TARGET)/cache
 
 # chaosblade-exec-os
-BLADE_EXEC_OS_PROJECT=https://github.com/lomoonmoonbird/chaosblade-exec-os.git
+BLADE_EXEC_OS_PROJECT=https://github.com/zexiplus/chaosblade-exec-os.git
 BLADE_EXEC_OS_BRANCH=master
 
 # chaosblade-exec-middleware
-BLADE_EXEC_MIDDLEWARE_PROJECT=https://github.com/lomoonmoonbird/chaosblade-exec-middleware.git
+BLADE_EXEC_MIDDLEWARE_PROJECT=https://github.com/zexiplus/chaosblade-exec-middleware.git
 BLADE_EXEC_MIDDLEWARE_BRANCH=main
 
 # chaosblade-exec-cloud
-BLADE_EXEC_CLOUD_PROJECT=https://github.com/lomoonmoonbird/chaosblade-exec-cloud.git
+BLADE_EXEC_CLOUD_PROJECT=https://github.com/zexiplus/chaosblade-exec-cloud.git
 BLADE_EXEC_CLOUD_BRANCH=main
 
 # chaosblade-exec-cri
-BLADE_EXEC_CRI_PROJECT=https://github.com/lomoonmoonbird/chaosblade-exec-cri.git
+BLADE_EXEC_CRI_PROJECT=https://github.com/zexiplus/chaosblade-exec-cri.git
 BLADE_EXEC_CRI_BRANCH=main
 
 # chaosblade-exec-kubernetes
-BLADE_OPERATOR_PROJECT=https://github.com/lomoonmoonbird/chaosblade-operator.git
+BLADE_OPERATOR_PROJECT=https://github.com/zexiplus/chaosblade-operator.git
 BLADE_OPERATOR_BRANCH=master
 
 # chaosblade-exec-jvm
-BLADE_EXEC_JVM_PROJECT=https://github.com/lomoonmoonbird/chaosblade-exec-jvm.git
+BLADE_EXEC_JVM_PROJECT=https://github.com/zexiplus/chaosblade-exec-jvm.git
 BLADE_EXEC_JVM_BRANCH=master
 
 # chaosblade-exec-cplus
-BLADE_EXEC_CPLUS_PROJECT=https://github.com/lomoonmoonbird/chaosblade-exec-cplus.git
+BLADE_EXEC_CPLUS_PROJECT=https://github.com/zexiplus/chaosblade-exec-cplus.git
 BLADE_EXEC_CPLUS_BRANCH=master
 
 # cri yaml
@@ -85,13 +85,13 @@ ifeq ($(GOOS), linux)
 	GO_FLAGS=-ldflags="-linkmode external -extldflags -static $(GO_X_FLAGS) -s -w"
 endif
 
-CC:=/usr/local/musl/bin/musl-gcc
+CC:=/usr/bin/musl-gcc
 
 help:
 	@echo ''
 	@echo 'You can compile each project of ChaosBlade on Mac or Linux platform,'
 	@echo 'You can use docker to compile cross-platform,compile the package running on Linux platform.'
-	@echo 'For details refer to https://github.com/lomoonmoonbird/chaosblade/wiki/ChaosBlade-Projects-Compilation'
+	@echo 'For details refer to https://github.com/zexiplus/chaosblade/wiki/ChaosBlade-Projects-Compilation'
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>...\033[0m\n"} /^[a-zA-Z0-9_-]+:.*?##/ { printf "  \033[36m%-20s\033[0m  %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
 ##@ Build
@@ -276,10 +276,10 @@ check_yaml:
 build_linux_with_arg:
 	docker run --rm \
 		-v $(shell go env GOPATH):/go \
-		-w /go/src/github.com/lomoonmoonbird/chaosblade \
+		-w /go/src/github.com/zexiplus/chaosblade \
 		-v ~/.m2/repository:/root/.m2/repository \
 		-v  /home/chaosblade/:/home/chaosblade/ \
-        -v $(shell pwd):/go/src/github.com/lomoonmoonbird/chaosblade \
+        -v $(shell pwd):/go/src/github.com/zexiplus/chaosblade \
 		ghcr.io/chaosblade-io/chaosblade-build-musl:latest build_with $$ARGS
 
 ## Select scenario build linux arm version by docker image
@@ -287,9 +287,9 @@ build_linux_arm_with_arg:
 	docker run --rm --privileged multiarch/qemu-user-static:register --reset
 	docker run --rm \
 		-v $(shell go env GOPATH):/go \
-		-w /go/src/github.com/lomoonmoonbird/chaosblade \
+		-w /go/src/github.com/zexiplus/chaosblade \
 		-v ~/.m2/repository:/root/.m2/repository \
-		-v $(shell pwd):/go/src/github.com/lomoonmoonbird/chaosblade \
+		-v $(shell pwd):/go/src/github.com/zexiplus/chaosblade \
 		ghcr.io/chaosblade-io/chaosblade-build-arm:latest build_with $$ARGS
 
 # create cache dir

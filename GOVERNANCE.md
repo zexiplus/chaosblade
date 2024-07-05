@@ -17,7 +17,7 @@ They normally take the following responsibilities:
 
 - Classify GitHub issues and perform pull request reviews for other maintainers and the community.
 
-- During GitHub issue classification, apply all applicable [labels](https://github.com/lomoonmoonbird/chaosblade/labels)
+- During GitHub issue classification, apply all applicable [labels](https://github.com/zexiplus/chaosblade/labels)
   to each new issue. Labels are extremely useful for follow-up of future issues. Which labels to apply
   is somewhat subjective so just use your best judgment.
 

@@ -19,7 +19,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/lomoonmoonbird/chaosblade/version"
+	"github.com/zexiplus/chaosblade/version"
 )
 
 type VersionCommand struct {

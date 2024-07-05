@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/channel"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
 )
 

@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
+	"github.com/zexiplus/chaosblade-spec-go/channel"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 
-	"github.com/lomoonmoonbird/chaosblade/exec/cplus"
-	"github.com/lomoonmoonbird/chaosblade/exec/jvm"
+	"github.com/zexiplus/chaosblade/exec/cplus"
+	"github.com/zexiplus/chaosblade/exec/jvm"
 )
 
 type RevokeCommand struct {

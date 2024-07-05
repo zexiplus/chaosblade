@@ -19,15 +19,15 @@ package cmd
 import (
 	"os"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 	"github.com/spf13/cobra"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 )
 
 type Cli struct {
 	rootCmd *cobra.Command
 }
 
-//NewCli returns the cli instance used to register and execute command
+// NewCli returns the cli instance used to register and execute command
 func NewCli() *Cli {
 	cli := &Cli{
 		rootCmd: &cobra.Command{
@@ -48,7 +48,7 @@ func (cli *Cli) setFlags() {
 	//flags.StringVarP(&util.LogLevel, "log-level", "l", "info", "level of logging wanted. 1=DEBUG, 0=INFO, -1=WARN, A higher verbosity level means a log message is less important.")
 }
 
-//Run command
+// Run command
 func (cli *Cli) Run() error {
 	return cli.rootCmd.Execute()
 }

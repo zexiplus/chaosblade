@@ -21,12 +21,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 
-	"github.com/lomoonmoonbird/chaosblade/data"
+	"github.com/zexiplus/chaosblade/data"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 )
 
 // Command is cli command interface
@@ -133,7 +133,7 @@ func (bc *baseCommand) generateUid() (string, error) {
 	return bc.generateUid()
 }
 
-//AddCommand is add child command to the parent command
+// AddCommand is add child command to the parent command
 func (bc *baseCommand) AddCommand(child Command) {
 	child.Init()
 	childCmd := child.CobraCmd()

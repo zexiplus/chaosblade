@@ -19,11 +19,11 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 
 	"github.com/spf13/cobra"
 
-	"github.com/lomoonmoonbird/chaosblade/exec/jvm"
+	"github.com/zexiplus/chaosblade/exec/jvm"
 )
 
 type QueryJvmCommand struct {

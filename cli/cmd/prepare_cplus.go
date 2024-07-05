@@ -18,15 +18,15 @@ package cmd
 
 import (
 	"context"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"strconv"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 	"github.com/spf13/cobra"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 
-	"github.com/lomoonmoonbird/chaosblade/exec/cplus"
+	"github.com/zexiplus/chaosblade/exec/cplus"
 )
 
 type PrepareCPlusCommand struct {

@@ -19,11 +19,11 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 
 	"github.com/spf13/cobra"
 
-	"github.com/lomoonmoonbird/chaosblade/exec/kubernetes"
+	"github.com/zexiplus/chaosblade/exec/kubernetes"
 )
 
 type QueryK8sCommand struct {

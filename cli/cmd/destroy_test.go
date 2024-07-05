@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 )
 
 func Test_convertCommandModel(t *testing.T) {

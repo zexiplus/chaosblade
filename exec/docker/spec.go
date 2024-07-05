@@ -16,7 +16,7 @@
 
 package docker
 
-import "github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+import "github.com/zexiplus/chaosblade-spec-go/spec"
 
 type CommandModelSpec struct {
 	spec.BaseExpModelCommandSpec

@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 )
 
 func TestQueryNetworkCommand_queryNetworkInfo(t *testing.T) {

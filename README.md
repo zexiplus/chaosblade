@@ -1,9 +1,9 @@
 ![logo](https://chaosblade.oss-cn-hangzhou.aliyuncs.com/doc/image/chaosblade-logo.png)
 
 # Chaosblade: An Easy to Use and Powerful Chaos Engineering Toolkit
-[![Build Status](https://travis-ci.org/lomoonmoonbird/chaosblade.svg?branch=master)](https://travis-ci.org/lomoonmoonbird/chaosblade)
-[![Financial Contributors on Open Collective](https://opencollective.com/chaosblade/all/badge.svg?label=financial+contributors)](https://opencollective.com/chaosblade) [![codecov](https://codecov.io/gh/lomoonmoonbird/chaosblade/branch/master/graph/badge.svg)](https://codecov.io/gh/lomoonmoonbird/chaosblade)
-![license](https://img.shields.io/github/license/lomoonmoonbird/chaosblade.svg)
+[![Build Status](https://travis-ci.org/zexiplus/chaosblade.svg?branch=master)](https://travis-ci.org/zexiplus/chaosblade)
+[![Financial Contributors on Open Collective](https://opencollective.com/chaosblade/all/badge.svg?label=financial+contributors)](https://opencollective.com/chaosblade) [![codecov](https://codecov.io/gh/zexiplus/chaosblade/branch/master/graph/badge.svg)](https://codecov.io/gh/zexiplus/chaosblade)
+![license](https://img.shields.io/github/license/zexiplus/chaosblade.svg)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5032/badge)](https://bestpractices.coreinfrastructure.org/projects/5032)
 
 中文版 [README](README_CN.md)
@@ -21,17 +21,17 @@ ChaosBlade is not only easy to use, but also supports rich experimental scenario
 * Cloud-native platforms: For example, CPU, memory, network, disk, and process experimental scenarios on Kubernetes platform nodes, Pod network and Pod itself experimental scenarios such as killing Pods, and container experimental scenarios such as the aforementioned Docker container experimental scenario;
 
 Encapsulating scenes by domain into individual projects can not only standardize the scenes in the domain, but also facilitate the horizontal and vertical expansion of the scenes. By following the chaos experimental model, the chaosblade cli can be called uniformly. The items currently included are:
-* [chaosblade](https://github.com/lomoonmoonbird/chaosblade): Chaos experiment management tool, including commands for creating experiments, destroying experiments, querying experiments, preparing experimental environments, and canceling experimental environments. It is the execution of chaotic experiments. Tools, execution methods include CLI and HTTP. Provides complete commands, experimental scenarios, and scenario parameter descriptions, and the operation is simple and clear.
-* [chaosblade-spec-go](https://github.com/lomoonmoonbird/chaosblade-spec-go): Chaos experimental model Golang language definition, scenes implemented using Golang language are easy to implement based on this specification.
-* [chaosblade-exec-os](https://github.com/lomoonmoonbird/chaosblade-exec-os): Implementation of basic resource experimental scenarios.
-* [chaosblade-exec-docker](https://github.com/lomoonmoonbird/chaosblade-exec-docker): Docker container experimental scenario implementation, standardized by calling the Docker API.
-* [chaosblade-exec-cri](https://github.com/lomoonmoonbird/chaosblade-exec-cri): Container experimental scenario implementation, standardized by calling the CRI.
-* [chaosblade-operator](https://github.com/lomoonmoonbird/chaosblade-operator): Kubernetes platform experimental scenario is implemented, chaos experiments are defined by Kubernetes standard CRD method, it is very convenient to use Kubernetes resource operation method To create, update, and delete experimental scenarios, including using kubectl, client-go, etc., and also using the chaosblade cli tool described above.
-* [chaosblade-exec-jvm](https://github.com/lomoonmoonbird/chaosblade-exec-jvm): Java application experimental scenario implementation, using Java Agent technology to mount dynamically, without any access, zero-cost use It also supports uninstallation and completely recycles various resources created by the Agent.
-* [chaosblade-exec-cplus](https://github.com/lomoonmoonbird/chaosblade-exec-cplus): C ++ application experimental scenario implementation, using GDB technology to implement method and code line level experimental scenario injection.
+* [chaosblade](https://github.com/zexiplus/chaosblade): Chaos experiment management tool, including commands for creating experiments, destroying experiments, querying experiments, preparing experimental environments, and canceling experimental environments. It is the execution of chaotic experiments. Tools, execution methods include CLI and HTTP. Provides complete commands, experimental scenarios, and scenario parameter descriptions, and the operation is simple and clear.
+* [chaosblade-spec-go](https://github.com/zexiplus/chaosblade-spec-go): Chaos experimental model Golang language definition, scenes implemented using Golang language are easy to implement based on this specification.
+* [chaosblade-exec-os](https://github.com/zexiplus/chaosblade-exec-os): Implementation of basic resource experimental scenarios.
+* [chaosblade-exec-docker](https://github.com/zexiplus/chaosblade-exec-docker): Docker container experimental scenario implementation, standardized by calling the Docker API.
+* [chaosblade-exec-cri](https://github.com/zexiplus/chaosblade-exec-cri): Container experimental scenario implementation, standardized by calling the CRI.
+* [chaosblade-operator](https://github.com/zexiplus/chaosblade-operator): Kubernetes platform experimental scenario is implemented, chaos experiments are defined by Kubernetes standard CRD method, it is very convenient to use Kubernetes resource operation method To create, update, and delete experimental scenarios, including using kubectl, client-go, etc., and also using the chaosblade cli tool described above.
+* [chaosblade-exec-jvm](https://github.com/zexiplus/chaosblade-exec-jvm): Java application experimental scenario implementation, using Java Agent technology to mount dynamically, without any access, zero-cost use It also supports uninstallation and completely recycles various resources created by the Agent.
+* [chaosblade-exec-cplus](https://github.com/zexiplus/chaosblade-exec-cplus): C ++ application experimental scenario implementation, using GDB technology to implement method and code line level experimental scenario injection.
 
 ## CLI Command
-You can download the latest chaosblade toolkit from [Releases](https://github.com/lomoonmoonbird/chaosblade/releases) and extract it and use it. If you want to inject Kubernetes related fault scenarios, you need to install [chaosblade-operator](https://github.com/lomoonmoonbird/chaosblade-operator/releases). For detailed Chinese usage documents, please see [chaosblade-help-zh-cn ](https://lomoonmoonbird.gitbook.io/chaosblade-help-zh-cn/).
+You can download the latest chaosblade toolkit from [Releases](https://github.com/zexiplus/chaosblade/releases) and extract it and use it. If you want to inject Kubernetes related fault scenarios, you need to install [chaosblade-operator](https://github.com/zexiplus/chaosblade-operator/releases). For detailed Chinese usage documents, please see [chaosblade-help-zh-cn ](https://zexiplus.gitbook.io/chaosblade-help-zh-cn/).
 
 chaosblade supports CLI and HTTP invocation methods. The supported commands are as follows:
 * **prepare**: alias is p, preparation before the chaos engineering experiment, such as drilling Java applications, you need to attach the java agent. For example, to drill an application whose application name is business, execute `blade p jvm --process business` on the target host. If the attach is successful, return the uid for status query or agent revoke.
@@ -59,7 +59,7 @@ docker run -it --privileged chaosbladeio/chaosblade-demo
 After entering the container, you can read the README.txt file to implement the chaos experiment, Enjoy it.
 
 ## Cloud Native
-[chaosblade-operator](https://github.com/lomoonmoonbird/chaosblade-operator) The project is a chaos experiment injection tool for cloud-native platforms. It follows the chaos experiment model to standardize the experimental scenario and defines the experiment as Kubernetes CRD Resources, mapping experimental models to Kubernetes resource attributes, and very friendly combination of chaotic experimental models with Kubernetes declarative design. While relying on chaotic experimental models to conveniently develop scenarios, it can also well integrate Kubernetes design concepts, through kubectl or Write code to directly call the Kubernetes API to create, update, and delete chaotic experiments, and the resource status can clearly indicate the execution status of the experiment, and standardize Kubernetes fault injection. In addition to using the above methods to perform experiments, you can also use the chaosblade cli method to execute kubernetes experimental scenarios and query the experimental status very conveniently. For details, please read the chinese document: [Chaos Engineering Practice under Cloud Native](CLOUDNATIVE.md)
+[chaosblade-operator](https://github.com/zexiplus/chaosblade-operator) The project is a chaos experiment injection tool for cloud-native platforms. It follows the chaos experiment model to standardize the experimental scenario and defines the experiment as Kubernetes CRD Resources, mapping experimental models to Kubernetes resource attributes, and very friendly combination of chaotic experimental models with Kubernetes declarative design. While relying on chaotic experimental models to conveniently develop scenarios, it can also well integrate Kubernetes design concepts, through kubectl or Write code to directly call the Kubernetes API to create, update, and delete chaotic experiments, and the resource status can clearly indicate the execution status of the experiment, and standardize Kubernetes fault injection. In addition to using the above methods to perform experiments, you can also use the chaosblade cli method to execute kubernetes experimental scenarios and query the experimental status very conveniently. For details, please read the chinese document: [Chaos Engineering Practice under Cloud Native](CLOUDNATIVE.md)
 
 ## Compile
 This project is written in golang, so you need to install the latest golang version first. The minimum supported version is 1.11. After the Clone project, enter the project directory and execute the following command to compile:
@@ -89,27 +89,27 @@ yay -S chaosblade-bin
 ```
 
 ## Bugs and Feedback
-For bug report, questions and discussions please submit [GitHub Issues](https://github.com/lomoonmoonbird/chaosblade/issues).
+For bug report, questions and discussions please submit [GitHub Issues](https://github.com/zexiplus/chaosblade/issues).
 
 You can also contact us via:
 * Dingding group (recommended for chinese): 23177705
-* Slack group: [lomoonmoonbird](https://join.slack.com/t/lomoonmoonbird/shared_invite/zt-f0d3r3f4-TDK13Wr3QRUrAhems28p1w)
-* Gitter room: [chaosblade community](https://gitter.im/lomoonmoonbird/community)
+* Slack group: [zexiplus](https://join.slack.com/t/zexiplus/shared_invite/zt-f0d3r3f4-TDK13Wr3QRUrAhems28p1w)
+* Gitter room: [chaosblade community](https://gitter.im/zexiplus/community)
 * Email: chaosblade.io.01@gmail.com
 * Twitter: [chaosblade.io](https://twitter.com/ChaosbladeI)
 
 ## Contributing
-We welcome every contribution, even if it is just punctuation. See details of [CONTRIBUTING](CONTRIBUTING.md). For the promotion ladder of specific community participation students, see： ([Contributor Ladder](https://github.com/lomoonmoonbird/community/blob/main/Contributor_Ladder.md))
+We welcome every contribution, even if it is just punctuation. See details of [CONTRIBUTING](CONTRIBUTING.md). For the promotion ladder of specific community participation students, see： ([Contributor Ladder](https://github.com/zexiplus/community/blob/main/Contributor_Ladder.md))
 
 ## Business Registration
-The original intention of our open source project is to lower the threshold for chaos engineering to be implemented in enterprises, so we highly value the use of the project in enterprises. Welcome everyone here [ISSUE](https://github.com/lomoonmoonbird/chaosblade/issues/32). After registration, you will be invited to join the corporate mail group to discuss the problems encountered by Chaos Engineering in the landing of the company and share the landing experience.
+The original intention of our open source project is to lower the threshold for chaos engineering to be implemented in enterprises, so we highly value the use of the project in enterprises. Welcome everyone here [ISSUE](https://github.com/zexiplus/chaosblade/issues/32). After registration, you will be invited to join the corporate mail group to discuss the problems encountered by Chaos Engineering in the landing of the company and share the landing experience.
 
 ## Contributors
 
 ### Code Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/lomoonmoonbird/chaosblade/graphs/contributors"><img src="https://opencollective.com/chaosblade/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/zexiplus/chaosblade/graphs/contributors"><img src="https://opencollective.com/chaosblade/contributors.svg?width=890&button=false" /></a>
 
 ## License
 Chaosblade is licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for the full license text.

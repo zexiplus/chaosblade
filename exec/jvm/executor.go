@@ -20,16 +20,16 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"strconv"
 	"strings"
 	"time"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/channel"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 
-	"github.com/lomoonmoonbird/chaosblade/data"
+	"github.com/zexiplus/chaosblade/data"
 )
 
 const DefaultUri = "sandbox/" + DefaultNamespace + "/module/http/chaosblade"

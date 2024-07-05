@@ -19,17 +19,17 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/log"
 	"strconv"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-operator/pkg/apis/chaosblade/v1alpha1"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/channel"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-operator/pkg/apis/chaosblade/v1alpha1"
+	"github.com/zexiplus/chaosblade-spec-go/channel"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
 	"github.com/spf13/cobra"
 
-	"github.com/lomoonmoonbird/chaosblade/data"
-	"github.com/lomoonmoonbird/chaosblade/exec/kubernetes"
+	"github.com/zexiplus/chaosblade/data"
+	"github.com/zexiplus/chaosblade/exec/kubernetes"
 )
 
 const (

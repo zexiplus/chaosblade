@@ -66,11 +66,6 @@ require (
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/klauspost/compress v1.11.13 // indirect
-	github.com/zexiplus/chaosblade-exec-cloud v1.8.6 // indirect
-	github.com/zexiplus/chaosblade-exec-cri v1.8.5 // indirect
-	github.com/zexiplus/chaosblade-exec-os v1.8.5 // indirect
-	github.com/zexiplus/chaosblade-operator v1.8.6 // indirect
-	github.com/zexiplus/chaosblade-spec-go v1.8.5 // indirect
 	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/mattn/go-runewidth v0.0.7 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2-0.20181231171920-c182affec369 // indirect

@@ -20,21 +20,22 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/zexiplus/chaosblade-spec-go/log"
-	"github.com/shirou/gopsutil/process"
 	"os/exec"
 	"path"
 	"strconv"
 	"time"
 
+	"github.com/shirou/gopsutil/process"
+	"github.com/zexiplus/chaosblade-spec-go/log"
+
 	"github.com/spf13/pflag"
 
 	"github.com/zexiplus/chaosblade/data"
 
+	"github.com/spf13/cobra"
 	"github.com/zexiplus/chaosblade-spec-go/channel"
 	"github.com/zexiplus/chaosblade-spec-go/spec"
 	"github.com/zexiplus/chaosblade-spec-go/util"
-	"github.com/spf13/cobra"
 )
 
 // CreateCommand for create experiment
@@ -163,7 +164,7 @@ func (cc *CreateCommand) actionRunEFunc(target, scope string, actionCommand *act
 				}
 				args = fmt.Sprintf("%s --%s=%s ", args, flag.Name, flag.Value)
 			})
-			args = fmt.Sprintf("%s %s %s", path.Join(util.GetProgramPath(), "blade"), args, "> /dev/null 2>&1 &")
+			args = fmt.Sprintf("sudo %s %s %s", path.Join(util.GetProgramPath(), "blade"), args, "> /dev/null 2>&1 &")
 			response := channel.NewLocalChannel().Run(context.Background(), "nohup", args)
 			if response.Success {
 				log.Infof(ctx, "async create success, uid: %s", model.Uid)
@@ -271,7 +272,7 @@ func (cc *CreateCommand) actionPostRunEFunc(actionCommand *actionCommand) func(c
 					timeout = timeout + 60
 				}
 				script := path.Join(util.GetProgramPath(), bladeBin)
-				args := fmt.Sprintf("nohup /bin/sh -c 'sleep %d; %s destroy %s' > /dev/null 2>&1 &",
+				args := fmt.Sprintf("nohup /bin/sh -c 'sleep %d;sudo %s destroy %s' > /dev/null 2>&1 &",
 					timeout, script, actionCommand.uid)
 				cmd := exec.CommandContext(context.TODO(), "/bin/sh", "-c", args)
 				return cmd.Run()

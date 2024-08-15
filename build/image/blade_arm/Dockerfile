@@ -1,7 +1,7 @@
-FROM multiarch/alpine:arm64-edge
-LABEL maintainer="Changjun Xiao"
+FROM alpine
+LABEL maintainer="Zexi Shi"
 
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
 # The image is chaosblade image
 RUN apk --no-cache add --update iproute2 bash util-linux curl fuse coreutils \

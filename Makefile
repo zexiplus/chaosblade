@@ -222,7 +222,7 @@ build_image: ## Build chaosblade-tool image
 	tar zxvf $(BUILD_TARGET_PKG_NAME) -C $(BUILD_IMAGE_PATH)
 	docker build -f $(BUILD_IMAGE_PATH)/Dockerfile \
 		--build-arg BLADE_VERSION=$(BLADE_VERSION) \
-		-t ghcr.io/chaosblade-io/chaosblade-tool:$(BLADE_VERSION) \
+		-t floatone/chaosblade-tool:$(BLADE_VERSION) \
 		$(BUILD_IMAGE_PATH)
 	rm -rf $(BUILD_IMAGE_PATH)/$(BUILD_TARGET_DIR_NAME)
 
@@ -233,7 +233,7 @@ build_image_arm: ## Build chaosblade-tool-arm image
 	docker buildx build -f $(BUILD_ARM_IMAGE_PATH)/Dockerfile \
                 --platform=linux/arm64 \
 		--build-arg BLADE_VERSION=$(BLADE_VERSION) \
-		-t ghcr.io/chaosblade-io/chaosblade-tool-arm64:$(BLADE_VERSION) \
+		-t floatone/chaosblade-tool-arm64:$(BLADE_VERSION) \
 		$(BUILD_ARM_IMAGE_PATH)
 	rm -rf $(BUILD_ARM_IMAGE_PATH)/$(BUILD_TARGET_DIR_NAME)
 
